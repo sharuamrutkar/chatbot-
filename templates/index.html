@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        /* CSS styles for partitioning */
+        .container {
+            display: flex;
+            justify-content: center; /* Center the child elements horizontally */
+            height: 100vh;
+        }
+
+        .content {
+            padding: 20px;
+            overflow-y: auto; /* Enable vertical scroll if content exceeds container height */
+        }
+
+        .chat-container {
+            width: 400px; /* Set fixed width for chatbox */
+            background-color: #f5f5f5;
+            padding: 20px;
+            overflow-y: auto; /* Enable vertical scroll if chat history exceeds container height */
+        }
+
+        .chat-separator {
+            width: 1px;
+            background-color: #ccc; /* Color of the separator line */
+            margin-left: 20px; /* Space between the separator and the chatbox */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>BNCOE ChatBot</h1>
+            <h2>Guided By- Dr.R.J.Bhiwani</h2>
+            <div class="presented-by">
+                <h3>Presented By:</h3>
+                <ul>
+                    <li>Sharyu Pravin Amrutkar</li>
+                    <li>Tejal Rajkishor Kottawar</li>
+                    <li>Samradhani Bandu Mane</li>
+                    <li>Ishwari Suresh Helgand</li>
+                </ul>
+            </div>
+            <!-- Other content goes here -->
+        </div>
+        <div class="chat-separator"></div>
+        <div class="chat-container">
+            <h2>Chat</h2>
+            <div id="chat-history"></div>
+            <div class="user-input">
+                <input type="text" id="user-message" placeholder="Type your message...">
+                <button id="send-button">Send</button>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+/* Chat Container */
+.chat-container {
+    width: 100%;
+    max-width: 350px;
+    height: 400px;
+    overflow-y: auto;
+    margin: 20px auto;
+    padding: 20px;
+    background-image: url("android-chrome-192x192.png"); /* Path to your image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Chat History */
+#chat-history {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+/* User Input Field */
+.user-input input[type="text"] {
+    width: calc(100% - 60px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+}
+
+.user-input button {
+    width: 60px;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.user-input button:hover {
+    background-color: #0056b3;
+}
+
+/* Message Bubbles */
+.message {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 70%;
+}
+
+.user-message {
+    background-color: #007bff;
+    color: #fff;
+    align-self: flex-end;
+}
+
+.bot-message {
+    background-color: #28a745;
+    color: #fff;
+    align-self: flex-start;
+}
+
+/* Message Bubble Animation */
+.message {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 70%;
+    opacity: 0; /* Initially set opacity to 0 */
+    animation: fadeIn 0.5s ease forwards; /* Apply fadeIn animation */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start opacity from 0 */
+    }
+    to {
+        opacity: 1; /* End opacity at 1 */
+    }
+}
+
+/* Button Hover Effect */
+.user-input button {
+    width: 60px;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Apply transition */
+}
+
+.user-input button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1); /* Scale button by 10% on hover */
+}
